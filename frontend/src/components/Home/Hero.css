@@ -1,0 +1,162 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(10, 35, 25, 0.85) 0%,
+    rgba(10, 35, 25, 0.6) 45%,
+    rgba(10, 35, 25, 0.2) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 43.75rem;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+
+  border: 1px solid rgb(255 255 255 / 0.25);
+  border-radius: 1rem;
+
+  background: rgb(255 255 255 / 0.1);
+
+  backdrop-filter: blur(0.5rem);
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero-title {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 1.08;
+
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.hero-title span {
+  color: var(--accent);
+}
+
+.hero-description {
+  max-width: 39rem;
+  margin-bottom: 2rem;
+
+  font-size: 1.2rem;
+  line-height: 1.7;
+
+  color: rgb(255 255 255 / 0.7);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  min-height: 3rem;
+  padding: 0 1.5rem;
+
+  border-radius: var(--radius-sm);
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.hero-primary-btn {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: 1px solid var(--accent);
+}
+
+.hero-primary-btn:hover {
+  background-color: #c18f60;
+  border-color: #c18f60;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.hero-secondary-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  backdrop-filter: blur(0.3rem);
+}
+
+.hero-secondary-btn:hover {
+  background-color: #ffffff;
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+
+    background-position: 60% center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 35, 25, 0.88),
+      rgba(10, 35, 25, 0.6)
+    );
+  }
+
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    width: 100%;
+  }
+}

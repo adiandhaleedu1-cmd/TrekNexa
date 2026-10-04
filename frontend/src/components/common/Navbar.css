@@ -1,0 +1,170 @@
+.treknexa-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100px; */
+  z-index: 1000;
+
+  padding: 1.25rem 0;
+  /* background: transparent; */
+  background: linear-gradient(
+    180deg,
+    rgba(10, 35, 25, 0.9) 0%,
+    /* rgba(10, 35, 25, 0.6) 45%, */ 
+    rgba(10, 35, 25, 0.6) 100%
+  );
+}
+
+.treknexa-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: #ffffff !important;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.treknexa-brand:hover {
+  color: #ffffff !important;
+}
+
+.treknexa-navbar .nav-link {
+  position: relative;
+  margin: 0 0.5rem;
+  color: rgb(255 255 255 / 0.85) !important;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+.treknexa-navbar .nav-link:hover,
+.treknexa-navbar .nav-link.active {
+  color: #ffffff !important;
+}
+
+.treknexa-navbar .nav-link::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 0.125rem;
+  background-color: var(--accent);
+  color: rgb(255 255 255 / 0.5) !important;
+
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.treknexa-navbar .nav-link:hover::after,
+.treknexa-navbar .nav-link.active::after {
+  width: 70%;
+  color: #ffffff !important;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.treknexa-login-btn,
+.treknexa-register-btn {
+  /* min-height: 2.75rem; */
+
+  padding: 0.5rem 1.2rem;
+
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.treknexa-login-btn {
+  color: #ffffff;
+  border: 1px solid rgb(255 255 255 / 0.45);
+  background: rgb(255 255 255 / 0.08);
+
+  backdrop-filter: blur(0.5rem);
+}
+
+.treknexa-login-btn:hover {
+  color: var(--primary);
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.treknexa-register-btn {
+  color: #ffffff;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.treknexa-register-btn:hover {
+  color: #ffffff;
+  background-color: #c18f60;
+  border-color: #c18f60;
+
+  transform: translateY(-0.125rem);
+}
+
+.treknexa-toggler {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.4rem;
+  color: #ffffff;
+
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.treknexa-toggler:focus {
+  box-shadow: none !important;
+}
+
+@media (max-width: 991.98px) {
+  .treknexa-navbar {
+    padding: 1rem 0;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding: 1rem;
+
+    border-radius: var(--radius-md);
+    background: rgb(27 67 50 / 0.95);
+    backdrop-filter: blur(0.75rem);
+  }
+
+  .treknexa-navbar .nav-link {
+    margin: 0;
+    padding: 0.65rem 0;
+  }
+
+  .treknexa-navbar .nav-link::after {
+    display: none;
+  }
+
+  .navbar-actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-top: 0.75rem;
+  }
+
+  .treknexa-login-btn,
+  .treknexa-register-btn {
+    width: 100%;
+  }
+}
