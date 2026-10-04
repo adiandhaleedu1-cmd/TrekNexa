@@ -1,0 +1,121 @@
+.why-treknexa {
+  padding: 5rem 0;
+  background-color: var(--surface);
+}
+
+.why-treknexa .section-title {
+  margin-bottom: 1rem;
+}
+
+.why-treknexa .section-title span {
+  display: block;
+  color: var(--secondary);
+}
+
+.why-treknexa-description {
+  max-width: 32rem;
+  margin-bottom: 1.75rem;
+
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.why-treknexa-btn {
+  min-height: 3rem;
+  padding: 0 1.5rem;
+
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+
+  color: #ffffff;
+  background-color: var(--primary);
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.why-treknexa-btn:hover {
+  color: #ffffff;
+
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+
+  transform: translateY(-2px);
+}
+
+.benefit-card {
+  height: 100%;
+  padding: 1.5rem;
+
+  border: 1px solid rgb(27 67 50 / 0.08);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--background);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-0.3rem);
+
+  box-shadow: 0 1rem 2.25rem rgb(27 67 50 / 0.08);
+}
+
+.benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  margin-bottom: 1rem;
+
+  border-radius: 0.75rem;
+
+  color: var(--secondary);
+  background-color: rgb(45 106 79 / 0.1);
+}
+
+.benefit-title {
+  margin-bottom: 0.6rem;
+
+  color: var(--text);
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.benefit-description {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 991.98px) {
+  .why-treknexa {
+    padding: 4rem 0;
+  }
+
+  .why-treknexa-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .why-treknexa {
+    padding: 3.5rem 0;
+  }
+
+  .benefit-card {
+    padding: 1.25rem;
+  }
+}
