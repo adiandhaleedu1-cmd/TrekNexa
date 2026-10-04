@@ -1,0 +1,128 @@
+.quick-explore {
+  padding: 5rem 0;
+  background-color: var(--background);
+}
+
+.quick-explore-header {
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+
+  margin-bottom: 0.75rem;
+
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-title {
+  margin-bottom: 0.75rem;
+
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-description {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.quick-explore-card {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  border: 1px solid rgb(27 67 50 / 0.08);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--surface);
+
+  box-shadow: 0 1rem 2.5rem rgb(27 67 50 / 0.08);
+}
+
+.quick-explore-card .form-label {
+  margin-bottom: 0.5rem;
+
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.search-input-wrapper,
+.location-input-wrapper {
+  position: relative;
+}
+
+.search-input-wrapper svg,
+.location-input-wrapper svg {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+
+  z-index: 2;
+
+  color: var(--muted);
+
+  transform: translateY(-50%);
+}
+
+.search-input-wrapper .form-control {
+  min-height: 3rem;
+  padding-left: 3rem;
+
+  border-color: #e5e7eb;
+  border-radius: var(--radius-sm);
+}
+
+.location-input-wrapper .form-select {
+  min-height: 3rem;
+  padding-left: 3rem;
+
+  border-color: #e5e7eb;
+  border-radius: var(--radius-sm);
+}
+
+.search-input-wrapper .form-control:focus,
+.location-input-wrapper .form-select:focus {
+  border-color: var(--secondary);
+
+  box-shadow: 0 0 0 0.2rem rgb(45 106 79 / 0.12);
+}
+
+.quick-explore-btn {
+  min-height: 3rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+
+  color: #ffffff;
+  background-color: var(--primary);
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.quick-explore-btn:hover {
+  color: #ffffff;
+
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+
+  transform: translateY(-2px);
+}
