@@ -5,15 +5,16 @@
   width: 100%;
   /* height: 100px; */
   z-index: 1000;
-
   padding: 1.25rem 0;
+
   /* background: transparent; */
   background: linear-gradient(
     180deg,
-    rgba(10, 35, 25, 0.9) 0%,
-    /* rgba(10, 35, 25, 0.6) 45%, */ 
-    rgba(10, 35, 25, 0.6) 100%
+    rgba(10, 35, 25, 0.95) 0%,
+    rgba(10, 35, 25, 0.75) 100%
   );
+
+  backdrop-filter: blur(0.5rem);
 }
 
 .treknexa-brand {
@@ -131,6 +132,10 @@
 
 .treknexa-toggler:focus {
   box-shadow: none !important;
+}
+
+.treknexa-toggler:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 991.98px) {
